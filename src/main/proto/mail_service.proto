@@ -1,0 +1,36 @@
+syntax = "proto3";  
+package proto;  
+
+option java_multiple_files = true;  
+option java_package = "proto.grpc.lib";  
+option java_outer_classname = "MailServiceProto";  
+option objc_class_prefix = "HLW";  
+  
+// The device service definition.  
+service MailService {  
+    // Sends a message  
+    rpc sendMessageMail (SendMessageMailReq) returns (SendMessageMailResp){}  
+}  
+  
+message MailMessage{
+ 	string messageCode=1;
+    string messageStatus=2;
+    string cause=3;
+}
+
+// The request message .  
+message SendMessageMailReq {  
+     MailMessage messageInfo = 1;  
+}  
+
+message SendMessageMailResp {  
+     string id=1;  
+     string serialNum=2;  
+     string userNum=3;  
+     int32  status=4;  
+     int32  type=5;  
+     string address=6;  
+     string createtime=7;  
+     string updatetime=8;  
+}  
+  

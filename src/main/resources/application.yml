@@ -1,0 +1,28 @@
+server:
+  port: 8085
+  
+#grpc:
+#  server:
+#    port: 8060
+  
+spring:
+  mail:
+    port: 25
+    username: rubberbox@126.com
+    password: bravesky270
+    protocol: smtp
+    default-encoding: utf-8
+    host: smtp.126.com
+  freemarker:
+    allow-request-override: false  
+    cache: false  
+    check-template-location: true  
+    charset: UTF-8  
+    content-type: text/html; charset=utf-8  
+    expose-request-attributes: false  
+    expose-session-attributes: false  
+    expose-spring-macro-helpers: false  
+    suffix: .ftl  
+    template-loader-path: classpath:/templates 
+  application:
+    name: local-grpc-server
